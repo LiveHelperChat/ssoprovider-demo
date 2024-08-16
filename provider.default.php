@@ -2,6 +2,7 @@
 
 define("LHC_API_CALL_URL",'https://demo.livehelperchat.com/restapi/generateautologin');
 define("AUTO_LOGIN_URL", "mailconv/sendemail/(layout)/popup");
+define("POPUP_MODE", false);
 
 $provider = new \League\OAuth2\Client\Provider\GenericProvider([
     'clientId'                => '<client_id>',                     // The client ID assigned to you by the provider

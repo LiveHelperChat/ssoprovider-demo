@@ -24,7 +24,12 @@ if (empty($_GET['state']) || empty($_SESSION['oauth2state']) || $_GET['state'] !
         ]);
 
         file_put_contents('token.json',json_encode($accessToken->jsonSerialize()));
-        header('Location: token.php');
+
+        if (POPUP_MODE === false) {
+            header('Location: token.php');
+        } else {
+            header('Location: tokenpopup.php');
+        }
 
         /*echo json_encode($accessToken->jsonSerialize());
 
